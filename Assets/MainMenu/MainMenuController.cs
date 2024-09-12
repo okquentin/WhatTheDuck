@@ -28,6 +28,11 @@ public class MainMenuController : MonoBehaviour
         ControlsPanel.blocksRaycasts = false;
     }
 
+    public void FreakyMode()
+    {
+        
+    }
+
     public void Controls()
     {
         //OptionPanel.alpha = 1;
