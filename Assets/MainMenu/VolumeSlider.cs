@@ -6,27 +6,28 @@ using UnityEngine.Audio;
 
 public class VolumeSlider : MonoBehaviour
 {
-    [SerializeField] Slider soundSlider;
-    [SerializeField] AudioMixer masterMixer;
+    [SerializeField] Slider Volume;
 
-    private void Start()
-    {
-        SetVolume(PlayerPrefs.GetFloat("SavedMasterVolume", 100f));
-    }
-
-    public void SetVolume(float _value)
-    {
-        if (_value < 0.01f)
-        {
-            _value = 0.01f;
+    void Start() {
+        if(!PlayerPrefs.HasKey("musicVolume")) {
+            PlayerPrefs.SetFloat("musicVolume", 1);
         }
-        RefreshSlider(_value);
-        PlayerPrefs.SetFloat("SavedMasterVolume", _value);
-        masterMixer.SetFloat("MasterVolume", Mathf.Log10(_value / 100) * 20f);
+        else {
+            Load();
+        }
     }
 
-    public void RefreshSlider(float _value)
-    {
-        soundSlider.value = _value;
+    public void SetVolume() {
+        AudioListener.volume = Volume.value;
     }
+
+    private void Load() {
+        Volume.value = PlayerPrefs.GetFloat("musicVolume");
+    }
+
+    private void Save() {
+        PlayerPrefs.SetFloat("musicVolume", Volume.value);
+    }
+
+  
 }
