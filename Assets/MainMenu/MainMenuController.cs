@@ -7,10 +7,14 @@ public class MainMenuController : MonoBehaviour
 {
     public CanvasGroup OptionPanel;
     public CanvasGroup ControlsPanel;
+    //private int rnum;
+
 
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        // var rand = new Random();
+        // int integerNumber = rand.Next(1, 3);   // Generates an integer between 1 and 2
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void Option()
