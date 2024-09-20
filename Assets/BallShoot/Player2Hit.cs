@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
-
-
-public class Hit : MonoBehaviour
+public class Player2Hit : MonoBehaviour
 {
     private int player2score;
-    public TMP_Text messageText;    
+    public TMP_Text messageText;   
     public GameObject Heart1;
     public GameObject Heart2;
     public GameObject Heart3;
@@ -16,7 +14,7 @@ public class Hit : MonoBehaviour
     private bool IsColliding; 
     void OnTriggerEnter2D (Collider2D target) {
             Debug.Log("Collision Detected!");
-        if( target.gameObject.tag.Equals("Ball1") == true ){
+        if( target.gameObject.tag.Equals("Ball2") == true ){
                 if (IsColliding) return;
                 IsColliding = true;
                 if (player2score == 3) {
@@ -26,7 +24,7 @@ public class Hit : MonoBehaviour
                 } else if (player2score == 1) {
                     DestroyHeart(Heart1);
                     if (messageText.text.Equals("")){
-                    messageText.SetText("Player 1 Wins!");
+                    messageText.SetText("Player 2 Wins!");
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                     }
                 }
