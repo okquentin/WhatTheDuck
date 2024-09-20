@@ -32,5 +32,7 @@ public class DuckManager : MonoBehaviour
         // Spawn the new duck
         currentDuck = Instantiate(duckPrefabs[duckType], spawnPoint.position, spawnPoint.rotation);
         Debug.Log("duck spawned");
+
+        
     }
 }
