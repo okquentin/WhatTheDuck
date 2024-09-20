@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 3b5570ca1bd3102459131446bcaadaf2
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/CharacterMenu.unity
+    guid: b351a6b45d995404a86e7bb0c4ed8cf3
+  - enabled: 1
+    path: Assets/Scenes/DuckSelection.unity
+    guid: 04a6e7424076d66488a3d9eaa918cc31
+  - enabled: 1
+    path: Assets/Scenes/DinoSelection.unity
+    guid: 7b37586a6db45c04b800c006e6af7b7b
   m_configObjects: {}
