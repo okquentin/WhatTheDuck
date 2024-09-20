@@ -14,7 +14,7 @@ public class TrajectoryLine : MonoBehaviour
     public void RenderLine1(Vector2 force) {
         lr1.positionCount = 2;
         Vector3[] points = new Vector3[2];
-        points[0] = force;
+        points[0] = force/5;
         points[1].x = 0;
         points[1].y = 0;
         points[1].z = 0;
@@ -24,7 +24,7 @@ public class TrajectoryLine : MonoBehaviour
     public void RenderLine2(Vector2 force) {
         lr2.positionCount = 2;
         Vector3[] points = new Vector3[2];
-        points[0] = force;
+        points[0] = force/5;
         points[1].x = 0;
         points[1].y = 0;
         points[1].z = 0;
